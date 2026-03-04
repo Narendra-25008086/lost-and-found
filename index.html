@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Lost & Found Portal</title>
+  <link rel="stylesheet" href="style.css">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+<body>
+
+  <h1>Lost & Found Portal</h1>
+
+  <form id="lostForm">
+    <input type="text" id="name" placeholder="Your Name" required>
+    <input type="text" id="item" placeholder="Item Name" required>
+    
+    <select id="type" required>
+      <option value="">Select Type</option>
+      <option>Lost</option>
+      <option>Found</option>
+    </select>
+
+    <textarea id="description" placeholder="Item Description" required></textarea>
+
+    <input type="text" id="contact" placeholder="Contact Number" required>
+    <input type="file" id="imageFile" accept="image/*" required>
+
+    <button type="button" onclick="submitForm()">Submit</button>
+  </form>
+
+  <h2>All Items</h2>
+  <div id="itemsContainer"></div>
+
+  <footer>
+    <p>© 2026 Lost & Found Portal | Developed by Narendra</p>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
