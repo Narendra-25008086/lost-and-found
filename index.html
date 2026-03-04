@@ -28,12 +28,23 @@
   </form>
 
   <h2>All Items</h2>
-  <div id="itemsContainer"></div>
+
+<input 
+  type="text" 
+  id="searchInput" 
+  placeholder="Search by name, item, type..." 
+  onkeyup="filterItems()"
+  class="search-bar"
+/>
+
+<div id="itemsContainer"></div>
 
   <footer>
-    <p>© 2026 Lost & Found Portal | Developed by Narendra</p>
-  </footer>
-
+  © 2026 Lost & Found System | Developed by 
+  <a href="https://www.linkedin.com/in/narendra-krishnan-k-s-a0646137b/" target="_blank">
+    Narendra Krishnan KS (AIML)
+  </a>
+</footer>
   <script src="script.js"></script>
 </body>
 </html>

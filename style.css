@@ -7,8 +7,8 @@ body {
   margin: 0;
   padding: 0;
   text-align: center;
-  background: linear-gradient(135deg, #667eea, #764ba2);
-  color: white;
+  background: linear-gradient(135deg, #5c77f0, #d06ef4);
+  color: rgb(226, 232, 233);
 }
 
 /* ===== Heading ===== */
@@ -19,10 +19,10 @@ h1 {
 
 /* ===== Form Container ===== */
 .container {
-  margin: 20px auto;
+  width: 90%;
+  max-width: 420px;   /* smaller form */
+  margin: 40px auto;
   padding: 25px;
-  width: 95%;
-  max-width: 420px;
   background: rgba(0, 0, 0, 0.25);
   border-radius: 15px;
   backdrop-filter: blur(10px);
@@ -31,13 +31,12 @@ h1 {
 /* ===== Form Fields ===== */
 form input,
 form select,
-form textarea,
-form button {
+form textarea {
   width: 100%;
-  padding: 12px;
-  margin: 10px 0;
-  border: none;
+  padding: 10px;
+  margin: 8px 0;
   border-radius: 8px;
+  border: none;
   font-size: 14px;
 }
 
@@ -46,23 +45,50 @@ form textarea {
   height: 90px;
 }
 
-/* ===== Button Style ===== */
+/* ===== File Input Spacing ===== */
+form input[type="file"] {
+  background: rgb(162, 160, 167);
+  padding: 6px;
+}
+
+/* ===== Submit Button ===== */
 form button {
-  background: #ff9800;
-  color: white;
+  width: 100%;
+  padding: 12px;
+  margin-top: 10px;
+  border-radius: 8px;
+  border: none;
+  background: #c3ea02;
+  color: rgb(18, 17, 17);
   font-weight: bold;
+  font-size: 15px;
   cursor: pointer;
   transition: 0.3s;
 }
 
 form button:hover {
-  background: #e68900;
-  transform: scale( gevest០.98);
+  background: #e1d3d3;
+  transform: scale(0.98);
+}
+
+/* ===== Search Bar ===== */
+.search-bar {
+  width: 90%;
+  max-width: 400px;
+  padding: 12px;
+  background: #f6f0f4;
+  color: rgb(13, 13, 13);
+  margin: 20px auto;
+  border-radius: 8px;
+  border: none;
+  font-size: 14px;
+  display: block;
 }
 
 /* ===== Items Section ===== */
 .items-section {
   margin-top: 50px;
+  
 }
 
 /* ===== Cards Layout ===== */
@@ -73,6 +99,7 @@ form button:hover {
   padding: 20px;
   width: 95%;
   margin: auto;
+
 }
 
 /* ===== Card Style ===== */
@@ -90,12 +117,15 @@ form button:hover {
   transform: translateY(-5px);
 }
 
+/* ===== Card Image (Full Visible) ===== */
 .card img {
   width: 100%;
-  height: 180px;
-  object-fit: cover;
+  height: auto;        /* full image visible */
+  max-height: 350px;
+  object-fit: contain;
   border-radius: 10px;
   margin-bottom: 10px;
+  background: #f2f2f2;
 }
 
 /* ===== Footer ===== */
@@ -119,10 +149,6 @@ footer {
     padding: 20px;
   }
 
-  .card {
-    width: 100%;
-  }
-
 }
 
 /* ========================= */
@@ -135,7 +161,7 @@ footer {
   }
 
   .container {
-    max-width: 500px;
+    max-width: 450px;
   }
 
   #itemsContainer {

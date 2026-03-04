@@ -127,6 +127,20 @@ function addCard(name, item, type, description, contact, imageURL, date) {
 
   container.appendChild(card);
 }
+function filterItems() {
+  const input = document.getElementById("searchInput").value.toLowerCase();
+  const cards = document.querySelectorAll(".card");
+
+  cards.forEach(card => {
+    const text = card.innerText.toLowerCase();
+
+    if (text.includes(input)) {
+      card.style.display = "block";
+    } else {
+      card.style.display = "none";
+    }
+  });
+}
 
 // ===============================
 // 🔄 Auto Load Items on Page Open
